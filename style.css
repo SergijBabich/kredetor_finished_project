@@ -1,0 +1,638 @@
+*{
+margin:0;
+padding: 0;
+}
+
+body{
+background-color: #e8eeee75;
+opacity: 0.82; /* Полупрозрачный фон */
+    filter: alpha(Opacity=80); /* Прозрачность в IE */
+background-repeat: round;
+}
+
+.boorstrap_grid{
+  max-width: 1170px;
+  margin: auto;
+}
+.background{
+width: 100%;
+}
+
+a{
+text-decoration: none;
+  }
+  li{
+    text-decoration: none;
+
+  }
+  .popular{
+    width: 100%;
+    position: absolute;
+    left: -390px;
+    top: 175px;
+  }
+
+   .collapsible{
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+         font-size: 14px;
+         line-height: 1.52857143;
+         color: #333333;
+         background-color: #f5f5f5;
+         margin-left: 20px;
+         width: 100%;
+         margin-top: 5px;
+         cursor: pointer;
+         padding: 6px;
+         border: 2px solid #dddddd;
+         border-radius: 3px;
+         text-align: left;
+         outline: none;
+         font-size: 15px;
+   }
+.active, .collapsible:hover{
+
+  background-color: #ae18ff;
+  color: white;
+}
+.content2{
+    padding: 0 18px;
+    width: 89.5%;
+    margin-left: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.52857143;
+    color: #333333;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+.content3
+{
+padding: 0 18px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+background-color: Red;
+
+}
+.text_back{
+max-width: 100%;
+
+
+
+    justify-content: center;
+}
+.lizense{
+  padding: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      line-height: 1.52857143;
+      color: #333333;
+
+}
+
+.advertising_bar{
+width: 100%;
+height: 140px;
+
+}
+.advanteges_items:hover{
+  margin-left: 10px;
+  transition: 0.4s;
+}
+.advertising_content{
+width: 90%;
+margin-top: 5px;
+
+justify-content: center;
+height: 130px;
+margin-left: 40px;
+}
+.info_bar h1{
+
+  width: 100%;
+  border-top: 2px solid #ae18ff;
+  font-family: Segoe,sans-serif;
+
+}
+
+
+
+   .formreg3{
+display: flex;
+padding-top: 25px;
+
+padding-bottom: 20px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.52857143;
+    color: #333333;
+        text-align: left;
+        color: #000;
+        width: 100%;
+      background-color: #f6f7f7;
+
+}
+.mw-104{
+width: 29px;
+height: 24px;
+left: 10px;
+}
+.formreg3 p{
+  padding-left: 10px;
+}
+
+
+  .logohead {
+    font-style: italic;
+    font-weight: bold;
+font-size: 40px;
+width: 12%;
+color: red;
+
+  }
+  .sidebar{
+background: Red;
+
+
+
+min-height: 500px;
+width: 30%;
+float: right;
+
+
+  }
+  .graficlogo2{
+  background-color: #000;
+      max-width: 20%;
+display: flex;
+    box-sizing: border-box;
+
+  }
+  .logo{
+width: 100%;
+display: flex;
+  height: 100px;
+
+  }
+
+.graficlogo{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+      display: inline-block;
+  color: #124a20;
+  flex: 50%;
+  justify-content: flex-start;
+
+}
+.textstle{
+    font-size: 30px;
+
+    padding: 20px 20px;
+font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+  }
+
+.logo a{
+
+text-align:-webkit-left;
+margin-right: 5px;
+
+}
+.mw-ccloan{
+width: 210px;
+height: 90px;
+}
+.mw-forza{
+    height: 90px;
+width: 210px;
+}
+.mw-100{
+width: 210px;
+}
+.mw-101{
+width: 100%;
+
+}
+.mw-101{
+width: 100%;
+margin-bottom: 2px;
+top: -12px;
+}
+.static-icon{
+  height: 80px;
+}
+
+.advanteges{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.height-icon{
+  height: 100px;
+  line-height: 9;
+}
+.advanteges_items{
+  width: 250px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+  background-color: #fafafa;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid Green;
+  transition: 0.4s;
+}
+.advanteges_items:hover{
+  border-color: #ae18ff;
+}
+.relog:hover{
+background-color: #ae18ff;
+
+}
+.logo_style{
+  width: 180px;
+
+}
+.advanteges_items p{
+border: 1px;
+padding: 5px;
+
+}
+.advanteges_contanier{
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+}.sity{
+  margin: 3px 10px;
+}
+.email_contact{
+  margin: 3px 10px;
+}
+.facebook_contact{
+    margin: 3px 10px;
+    text-align: center;
+}
+.contact{
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+ .info_bar {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin-left: 20px;
+    line-height: 1.52857143;
+    color: #333333;
+
+  }
+  .advanteges_icon p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+
+        line-height: 1.52857143;
+        color: #333333;
+
+
+
+  }
+.advanteges_site{
+width: 80%;
+padding-top: 40px;
+padding-bottom: 40px;
+display: flex;
+justify-content: space-between;
+text-align: center;
+flex-wrap: wrap;
+}
+.advanteges_icon{
+  width: 18%;
+
+
+  padding: 10px;
+
+
+}
+ h5{
+font-size: 28px;
+padding-top: 15px;
+padding-bottom: 10px;
+
+background-color:#ff9e0f38;
+text-align: left;
+}
+.advanteges_icon:hover{
+
+}
+.advanteges_icon p{
+padding: 5px;
+}
+.advanteges_verificidet{
+  display: flex;
+  justify-content: center;
+}
+.mw-102{
+width: 112px;
+height: 112px;
+cursor: pointer;
+border: 2px solid #4caf50;
+border-radius: 50%;
+background-position: center;
+background-size: cover;
+}
+.content_uslovie{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+margin-left: 20px;
+      font-size: 14px;
+      line-height: 1.52857143;
+      color: #333333;
+justify-content: left;
+
+}
+.content_uslovie p{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+margin-left: 20px;
+      font-size: 14px;
+      line-height: 1.52857143;
+      color: #333333;
+justify-content: left;
+
+
+
+}
+.content_uslovie h1{
+justify-content: space-between;
+text-align: left;
+font-size: 20px;
+}
+.content_uslovie h2{
+justify-content: space-between;
+text-align: left;
+font-size: 25px;
+}
+.novid{
+  border-top: 2px solid #211212;
+  border-bottom: 2px solid #211212;
+
+}
+.relog{
+  font-size: 25px;
+  background-color: #19de54;
+  cursor:pointer ;
+  border-radius: 5px;
+  padding: 7px;
+border: 1px solid #Yellow;
+}
+.relog a {
+color: white;
+cursor: pointer;
+}
+
+nav{
+margin: auto;
+width:100%;
+margin-top: 5px;
+border-bottom: 5px solid #000;
+height: 40px;
+justify-content: center;
+
+}
+footer p{
+  font-size: 15px;
+  padding-right: 40px;
+}
+footer{
+  width: 100%;
+  height: auto;
+
+background-color: #ae18ff;
+margin: 0 auto;
+text-align: center;
+padding-top: 15px;
+}
+
+ footer p{
+  font-size: 11px;
+
+padding-left: 20px;
+
+
+
+
+
+}
+footer a{
+color:#fff;
+font-size: 12px;
+margin-left: 20px;
+}
+
+footer nav a:hover{
+border-bottom: 1px solid white;
+
+}
+.topnav{
+
+      line-height: 1.52857143;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 5px;
+
+
+
+}
+.topnav a{
+color: #000;
+font-size: 16px;
+line-height: 1.52857143;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-align: center;
+padding: 14px 16px;
+}
+.topnav a:hover{
+border-bottom: 2px solid #000;
+}
+.topnav .icon{
+  display: none;
+}
+.city{
+  max-width: 1170px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 20px;
+  margin: auto;
+}
+.opportunity{
+  text-align: center;
+  margin: 20px;
+
+}
+.linear_ground{
+  background-image:  linear-gradient(to right, #59c45c 0%, #59c45c 32%, #4fbbd3 33%, #4fbbd3 66%, #ff4e4e 67%, #ff4e4e 100%);
+  height: 2px;
+  max-width: 1170px;
+  width: 100%;
+  margin: auto;
+}
+.city_borough{
+  margin: 20px;
+  width: 180px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  background: #fff;
+-webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+/* box-shadow: 0 0 10px rgba(0,0,0,.2); */
+}
+.city_borough:hover{
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  width: 200px;
+}
+.city_borough a{
+  text-decoration: none;
+}
+@media screen  and (max-width:768px){
+  .topnav a:not(:first-child){
+    display: none;
+  }
+  .logo_main{
+    width: 340px;
+  }
+  .height-icon{
+     height: auto;
+     margin-bottom: 6px;
+   line-height: 0;
+
+
+  }
+  .topnav a.icon{
+    float: right;
+    margin-top: -17px;
+    display:block;
+    color: Black;
+
+  }
+  .logo{
+    display: flex;
+  }
+  .textstle{
+  font-size: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+  .advanteges_items{
+  width: 300px;
+  }
+  .advanteges_icon{
+  width: 25%;
+  }
+   nav{
+width: 95%;
+   }
+ .topnav.responsive{
+   position: relative;
+   background-color: #f2f7f5;
+
+ }
+ .topnav.responsive a.icon{
+position: absolute;
+right: 0;
+top: 0;
+ }
+  .topnav.responsive a{
+    float: none;
+    display: block;
+    text-align:left;
+  }
+}
+
+@media screen  and (max-width:530px){
+nav{
+  width: 95%;
+  height: 50px;
+}
+.logo{
+  display: flex;
+
+}
+.info_bar{
+  width: 87%;
+}
+.logo_main{
+  width: 240px;
+}
+.logo a{
+
+
+  margin-right: 100px;
+
+
+}
+.textstle{
+font-size: 13px;
+display: none;
+padding-right: 5px;
+margin-bottom: 5px;
+position: absolute;
+
+}
+
+  .advanteges{
+flex-direction: column;
+}
+.background{
+width: 100%;
+
+
+}
+.collapsible{
+width: 90%;
+
+
+}
+footer {
+  width: 100%;
+}
+.advertising_content{
+margin-left: 20px;
+
+}
+.content2  {
+width: 84%;
+height: 200px;
+}
+  .advanteges_items{
+    width: 90%;
+        margin-left: 1px;
+  }
+  .advanteges_site{
+
+}
+  .advanteges_icon{
+    width: 50%;
+  }
+  .topnav.responsive{
+    position: relative;
+    background-color: #f2f7f5;
+  }
+  @media screen  and (max-width:323px){
+  nav{
+    width: 100%;
+    height: 70px;
+  }

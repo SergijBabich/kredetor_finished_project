@@ -1,0 +1,275 @@
+body{
+  margin: 0;
+  }
+.calcbox {
+width: 28%;
+margin: 37px;
+color: white;
+display: flex;
+align-items: center;
+flex-direction: column;
+
+}
+.textbox{
+width: 100%;
+margin: 5px 0px;
+}
+.rezultcalc{
+width: 45%;
+text-align: center;
+height: 300px;
+color: black;
+margin: 20px auto;
+background-color: #eef7ee;
+  }
+  .borderbot{
+    border-bottom: 1px solid #5dd828;
+    font-size: 18px;
+    padding-bottom: 7px;
+  }
+  .rezultcalc h2{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        border-top: 5px solid black;
+        line-height: 1.52857143;
+margin-bottom: 10px;
+  }
+  .rezultcalc p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 17px;
+
+  color: #333333;
+        line-height: 1.52857143;
+margin-bottom: 24px;
+
+  }
+
+.textinfo {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        color: #333333;
+        line-height: 1.52857143;
+        margin: 20px;
+        font-size: 20px;
+}
+.ceo{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: black;
+    line-height: 1.52857143;
+  margin: 20px;
+  }
+  .advanteges_contanier2{
+    display: flex;
+    max-width: 1170px;
+    margin: auto;
+    border-radius: 20px;
+
+    justify-content: center;
+  }
+
+.inform_form_calc{
+width: 80%;
+display: flex;
+  background-color: #eef7ee;
+  padding-top: 40px;
+padding-bottom: 40px;
+justify-content: space-between;
+background-repeat: no-repeat;
+background-size: cover;
+flex-wrap: wrap;
+}
+.advertising_bar2{
+width: 25%;
+
+display: flex;
+justify-content: space-between;
+text-align: center;
+flex-wrap: wrap;
+}
+.inform_form_calc h1,{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.52857143;
+      color: #333333;
+text-align: left;
+width: 40%;
+border-bottom: 2px solid red;
+margin-left: 20px;
+}
+.inform_form_calc p{
+
+text-align: left;
+margin-left: 20px;
+
+}
+.resale2{
+
+width: 100%;
+  height: 400px;
+}
+.textbox input{
+border: none;
+width: 80%;
+outline: none;
+background: none;
+cursor: inherit;
+color: #000000;
+font-size: 18px;
+    border-bottom: 1px solid #000000;
+float: left;
+margin: 10px;
+}
+.textbox input:hover{
+  width: 110%;
+  transition: 0.4s;
+}
+::placeholder{
+  color: #e5efe9;
+}
+.btn{
+  width: 90%;
+  height: 40px;
+  background: #00712f;
+  border: 2px solid #5dd828;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 12px 0;
+    transition: 0.2s;
+}
+.btn:hover{
+  width: 110%;
+  transition: 0.4s;
+}
+.resale3{
+  display: none;
+}
+.wraper{
+  margin: 0px auto;
+}
+.wraper_choice{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.wraper_choice a{
+  padding: 7px 0px;
+  text-decoration: none;
+  font-size: 19px;
+  color: #5dd828;
+}
+.wraper_choice h1{
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.52857143;
+  color: #333333;
+  text-align: left;
+  width: 90%;
+  border-bottom: 2px solid red;
+  margin-left: 20px;
+
+}
+@media screen  and (max-width:768px){
+.inform_form_calc{
+  width: 100%;
+
+
+}
+.resale2{
+  display: none;
+}
+.resale3{
+margin-left: 80px;
+  display:block;
+  width: 70%;
+
+  height: 145px;
+}
+.inform_form_calc p{
+display: none;
+}
+.advertising_bar2{
+width: 100%;
+height: 175px;
+  padding-top: 135px;
+}
+.advanteges_contanier2{
+display: block;
+
+
+}
+.calcbox{
+width: 50%;
+margin: auto;
+}
+.rezultcalc{
+width: 100%;
+
+}
+.btn{
+  width: 30%;
+
+}
+
+.textinfo
+ {
+
+background-color: #eef7ee;
+margin: 20px;
+}
+.textinfo p{
+
+  background-color: #eef7ee;
+      font-size: 17px;
+}
+@media screen  and (max-width:530px){
+.advanteges_contanier2{
+
+
+}
+.textbox input{
+      margin: auto;
+      width: 100%;
+}
+  .advanteges{
+flex-direction: column;
+}
+.inform_form_calc p{
+  font-size: 15px;
+}
+
+.btn{
+width: 70%;
+
+font-size: 15px;
+}
+.inform_form_calc{
+  width: 100%;
+
+
+}
+.resale3{
+margin-left: 80px;
+  display:block;
+  width: 70%;
+  margin-left: 40px;
+  height: 113px;
+}
+.advertising_bar2 {
+  width: 100%;
+
+  height: 80px;
+  padding-top: 105px;
+
+}
+
+.textinfo p {
+    width: 90%;
+    font-size: 14px;
+}
+.rezultcalc{
+  width: 100%;
+}
