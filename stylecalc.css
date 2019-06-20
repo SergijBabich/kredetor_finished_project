@@ -49,8 +49,9 @@ margin-bottom: 24px;
         font-size: 17px;
         color: #333333;
         line-height: 1.52857143;
-        margin: 20px;
+        margin: 10px auto;
         font-size: 20px;
+        max-width: 1170px;
 }
 .ceo{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -81,8 +82,8 @@ flex-wrap: wrap;
 }
 .advertising_bar2{
 width: 25%;
-
 display: flex;
+margin: 0px 10px;
 justify-content: space-between;
 text-align: center;
 flex-wrap: wrap;
@@ -156,8 +157,13 @@ margin: 10px;
 .wraper_choice a{
   padding: 7px 0px;
   text-decoration: none;
-  font-size: 19px;
-  color: #5dd828;
+  font-size: 22px;
+  margin: 5px 0px;
+  border: 2px solid green;
+  border-radius: 10px;
+  background-color: #efff0152;
+  font-weight: bold;
+  color: #ae18ff;
 }
 .wraper_choice h1{
   font-size: 20px;
@@ -188,13 +194,13 @@ margin-left: 80px;
 
   height: 145px;
 }
+
 .inform_form_calc p{
 display: none;
 }
 .advertising_bar2{
 width: 100%;
-height: 175px;
-  padding-top: 135px;
+  padding-top: 10px;
 }
 .advanteges_contanier2{
 display: block;
@@ -216,7 +222,6 @@ width: 100%;
 
 .textinfo
  {
-
 background-color: #eef7ee;
 margin: 20px;
 }
