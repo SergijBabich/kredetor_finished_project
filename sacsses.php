@@ -52,9 +52,7 @@
   <span > </span>
   Исходя из заполненых полей, была проанализирована ваша Кредитная история и найдено найлучшие предложения
   </div>
-  <div class="text_name1" id="God">
-<span> </span>
-  </div>
+
 </fonm>
 <div class="container_reconect">
   <div class="advanteges_items">

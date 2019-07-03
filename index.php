@@ -12,6 +12,30 @@
     color: red;
   }
 </style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script>
+ function AjaxFormRequest(result_id,formMain,url) {
+ jQuery.ajax({
+ url: url,
+ type: "POST",
+ dataType: "html",
+ data: jQuery("#"+formMain).serialize(),
+ success: function(response) {
+ document.getElementById(result_id).innerHTML ="Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи";
+ },
+ error: function(response) {
+ document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+ }
+ });
+
+ $(':input')
+ .not(':button, :submit, :reset, :hidden')
+ .val('')
+ .removeAttr('checked')
+ .removeAttr('selected');
+ }
+</script>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,7 +69,39 @@
     </nav>
 
 </header>
+
 <div class="boorstrap_grid">
+  <div class="collback">
+    <div id="zatemnenie">
+      <div class="zatemnenie_okno">
+
+
+       <div id="okno">
+         <a href="#" class="close"> <img src="images/baseline_clear_black_18dp.png" alt=""> </a>
+         <div class="wrapper">
+       <div class="form">
+
+
+       <form method="post" action="" id="formMain">
+            <div id="messegeResult">Оставьте ваши контакты и наш консультант свяжется с вами </div>
+             <input id="name" type="text" class="leadsinput" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" />
+             <input id="telephone" type="Tel"  class="leadsinput"  name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off"/>
+             <input id="button" type="button"   class="leadsinput"   value="Заказать обратный звонок" onclick="AjaxFormRequest('messegeResult', 'formMain', 'index.php#zatemnenie')"/>
+       </form>
+       </div>
+       </div>
+       <div id="result_id">
+
+       </div>
+
+
+
+       </div>
+             </div>
+     </div>
+
+     <a href="#zatemnenie" >   <img src="images/baseline_phone_black_18dp.png" class="phone" alt="">   </a>
+  </div>
 <main>
   <div class="advanteges_contanier">
     <div class="advanteges">
@@ -314,3 +370,37 @@
 </div>
   </body>
 </html>
+<?php
+$servername = "localhost";
+$database = "creditor";
+$username = "root";
+$password = "";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+}
+
+echo "Connected successfully";
+
+if($_POST)
+    {
+      $Name =  strip_tags(trim($_POST ['name']));
+      $phone =  strip_tags(trim($_POST ['telephone']));
+      $sql = "INSERT INTO contactcentre(name, telephone) VALUES ('$Name', '$phone')";
+    }
+    if (mysqli_query($conn, $sql)) {
+          echo "New record created successfully";
+    } else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    mysqli_close($conn);
+
+
+
+    if ($sql){
+        echo "Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи или вернуться на сайт";
+    }
+
+?>

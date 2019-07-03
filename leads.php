@@ -57,7 +57,7 @@
   <input type="number" id="number" class="leadsinput raz" onKeyPress="return check(event,value)" onInput="checkNumberLength()"  autocomplete="off" name="phone" value=""placeholder=" 380XXXXXXXXX">
   *Введите ваш ИНН ()
    <input type="number" id="dei" onKeyPress="return check(event,value)"  onInput="checkLength()"  class="leadsinput raz"  autocomplete="off" name="Nie" value="" placeholder=" 3194357753">
-  <input type="submit"  onclick="Onclock()" class="leadsinput"name ="add" value = "Подобрать найлучшее предложение" />
+  <input type="submit"  onclick="Onclock()" class="leadsinput buttom-leads"name ="add" value = "Подобрать найлучшее предложение" />
   </form>
 
 
