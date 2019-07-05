@@ -83,7 +83,6 @@ border-radius: 10px;
 .close:hover {background: #e6e6ff;}
 #inn{
 position: relative;
-z-index: -1;
 }
 #inn::after{
 content: 'new';
@@ -150,7 +149,7 @@ text-decoration: none;
          color: #333333;
          background-color: #f5f5f5;
          margin-left: 20px;
-         
+
          margin: 5px;
          cursor: pointer;
          padding: 6px;
