@@ -18,8 +18,8 @@ background-repeat: round;
 width: 100%;
 }
 #zatemnenie {
-  background: rgba(102, 102, 102, 0.5);
-  width: 1170px;
+    max-width:1170px;
+    width: 100%;
   margin: auto;
   align-items: center;
   height: 1080px;
@@ -30,8 +30,9 @@ width: 100%;
 }
 .zatemnenie_okno{
   width: 1170px;
-  margin: 10px auto;
-  height: 250px;
+  height: 550px;
+
+  margin: auto;
 }
 #formMain{
   display: flex;
@@ -44,6 +45,7 @@ margin: 10px auto;
 }
 #messegeResult{
   margin: 10px 0px;
+  align-items: flex-start;
 }
 .leadsinput{
   width: 330px;
@@ -61,15 +63,14 @@ border-radius: 10px;
 }
 #okno {
   width: 600px;
-  height: 400px;
-
-  margin:auto;
+  height: 300px;
+  margin: auto;
   text-align: end;
   padding: 15px;
   border: 3px solid #ae18ff;
   border-radius: 10px;
   color: #0000cc;
-  margin: auto;
+
   background: #fff;
 }
 #zatemnenie:target {display: block;}
@@ -82,6 +83,7 @@ border-radius: 10px;
 .close:hover {background: #e6e6ff;}
 #inn{
 position: relative;
+z-index: -1;
 }
 #inn::after{
 content: 'new';
@@ -102,6 +104,7 @@ transform: rotate(45deg);
   position: fixed;
   width: 50px;
   height: 50px;
+  top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,17 +113,21 @@ transform: rotate(45deg);
   transition: 0.2s;
 }
 .close{
-
+  border: 1px solid #ae18ff;
 }
 
 .collback:hover{
 border: 3px solid #ae18ff;
   transition: 0.2s;
   }
+  .phone{
+
+  }
 .phone:hover{
   width: 40px;
   height: 40px;
     transition: 0.2s;
+
 }
 a{
 text-decoration: none;
@@ -143,8 +150,8 @@ text-decoration: none;
          color: #333333;
          background-color: #f5f5f5;
          margin-left: 20px;
-         width: 100%;
-         margin-top: 5px;
+         
+         margin: 5px;
          cursor: pointer;
          padding: 6px;
          border: 2px solid #dddddd;
@@ -610,6 +617,23 @@ border-bottom: 2px solid #000;
 .city_borough a{
   text-decoration: none;
 }
+
+
+@media screen  and (max-width:1045px){
+.zatemnenie_okno{
+  width: 700px;
+}
+}
+@media screen  and (max-width:913px){
+.zatemnenie_okno{
+  width: 608px;
+}
+@media screen  and (max-width:860px){
+.zatemnenie_okno{
+  width: 770px;
+  position: absolute;
+top: -129px;
+}
 @media screen  and (max-width: 833px){
   .topnav a:not(:first-child){
     display: none;
@@ -642,7 +666,13 @@ top: 0;
   .logo_main{
     width: 340px;
   }
-
+  .zatemnenie_okno{
+    width: 700px;
+  }
+#okno{
+  width: 481px;
+  height: 231px;
+}
 
   .logo{
     display: flex;
@@ -652,8 +682,17 @@ top: 0;
   margin-right: 20px;
   margin-left: 20px;
 }
-
-
+.leadsinput{
+  height: 35px;
+}
+.close{
+  width: 25px;
+  height: 25px;
+}
+.close_line{
+  width: 25px;
+  height: 25px;
+}
   .advanteges_icon{
   width: 25%;
   }
@@ -662,6 +701,27 @@ width: 95%;
    }
 
 }
+@media screen  and (max-width:700px){
+
+  .zatemnenie_okno{
+    width: 580px;
+  }
+  #okno{
+    width: 400px;
+    height: 320px;
+  }
+
+}
+@media screen  and (max-width:658px){
+  .zatemnenie_okno{
+    width: 530px;
+  }
+#okno{
+  width: 381px;
+  height: 280px;
+}
+}
+
 
 @media screen  and (max-width:530px){
 nav{
@@ -670,8 +730,18 @@ nav{
 }
 .logo{
   display: flex;
-
 }
+.zatemnenie_okno{
+  width: 470px;
+}
+#okno{
+width: 281px;
+height: 250px;
+}
+.leadsinput{
+  width: 244px;
+}
+
 .info_bar{
   width: 87%;
 }
@@ -679,11 +749,7 @@ nav{
   width: 240px;
 }
 .logo a{
-
-
   margin-right: 100px;
-
-
 }
 .textstle{
 font-size: 13px;
@@ -691,36 +757,25 @@ display: none;
 padding-right: 5px;
 margin-bottom: 5px;
 position: absolute;
-
 }
-
   .advanteges{
 flex-direction: column;
 }
 .background{
 width: 100%;
-
-
 }
 .collapsible{
 width: 90%;
-
-
 }
 footer {
   width: 100%;
 }
 .advertising_content{
 margin-left: 20px;
-
 }
 .content2  {
 width: 84%;
 height: 200px;
-}
-
-  .advanteges_site{
-
 }
   .advanteges_icon{
     width: 50%;
@@ -729,8 +784,62 @@ height: 200px;
     position: relative;
     background-color: #f2f7f5;
   }
+}
+  @media screen  and (max-width:440px){
+    .zatemnenie_okno{
+      width: 430px;
+    }
+    #okno{
+    width: 281px;
+    height: 431px;
+    }
+    .leadsinput{
+      width: 244px;
+    }
+  }
+
+    @media screen  and (max-width:400px){
+      .zatemnenie_okno{
+        width: 330px;
+      }
+      #okno{
+      width: 281px;
+      height: 331px;
+      }
+      .leadsinput{
+        width: 244px;
+      }
+    }
+    @media screen  and (max-width:350px){
+      .zatemnenie_okno{
+        width: 330px;
+      }
+      #okno{
+      width: 240px;
+      height: 331px;
+      }
+      .leadsinput{
+        width: 244px;
+      }
+    }
+
+
   @media screen  and (max-width:323px){
   nav{
     width: 100%;
     height: 70px;
   }
+  .zatemnenie_okno{
+    width: 270px;
+  }
+  #okno{
+  width: 210px;
+  height: 331px;
+  }
+  .leadsinput{
+    width: 244px;
+  }
+  .leadsinput{
+    width: 220px;
+  }
+}

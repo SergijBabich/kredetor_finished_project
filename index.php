@@ -77,16 +77,17 @@
 
 
        <div id="okno">
-         <a href="#" class="close"> <img src="images/baseline_clear_black_18dp.png" alt=""> </a>
+         <a href="#" class="close"> <img src="images/baseline_clear_black_18dp.png" class="close_line" alt=""> </a>
+           <div id="messegeResult">Оставьте ваши контакты и наш консультант свяжется с вами </div>
          <div class="wrapper">
        <div class="form">
 
 
        <form method="post" action="" id="formMain">
-            <div id="messegeResult">Оставьте ваши контакты и наш консультант свяжется с вами </div>
+
              <input id="name" type="text" class="leadsinput" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" />
              <input id="telephone" type="Tel"  class="leadsinput"  name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off"/>
-             <input id="button" type="button"   class="leadsinput"   value="Заказать обратный звонок" onclick="AjaxFormRequest('messegeResult', 'formMain', 'index.php#zatemnenie')"/>
+             <input id="button" type="button"   class="leadsinput"   value="Заказать консультацию " onclick="AjaxFormRequest('messegeResult', 'formMain', 'index.php#zatemnenie')"/>
        </form>
        </div>
        </div>
@@ -100,7 +101,7 @@
              </div>
      </div>
 
-     <a href="#zatemnenie" >   <img src="images/baseline_phone_black_18dp.png" class="phone" alt="">   </a>
+       <a href="#zatemnenie" >   <img src="images/baseline_phone_black_18dp.png" class="phone" alt="">   </a>
   </div>
 <main>
   <div class="advanteges_contanier">
@@ -400,7 +401,7 @@ if($_POST)
 
 
     if ($sql){
-        echo "Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи или вернуться на сайт";
+          echo "Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи или вернуться на сайт";
     }
 
 ?>
