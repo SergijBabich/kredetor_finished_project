@@ -65,6 +65,12 @@ font-weight: bold;
 line-height: 1.52857143;
 color: #ae18ff;
 }
+.ubki{
+  height:auto;
+  max-width: 1170px;
+  width: 100%;
+  margin: auto;
+}
 .container_reconect{
 margin: auto;
 max-width: 1170px;

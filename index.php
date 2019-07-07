@@ -15,27 +15,91 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <script>
- function AjaxFormRequest(result_id,formMain,url) {
- jQuery.ajax({
- url: url,
- type: "POST",
- dataType: "html",
- data: jQuery("#"+formMain).serialize(),
- success: function(response) {
- document.getElementById(result_id).innerHTML ="Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи";
- },
- error: function(response) {
- document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
- }
- });
 
- $(':input')
- .not(':button, :submit, :reset, :hidden')
- .val('')
- .removeAttr('checked')
- .removeAttr('selected');
- }
 </script>
+<script type="text/javascript">
+function AjaxFormRequest(result_id,formMain,url) {
+jQuery.ajax({
+url: url,
+type: "POST",
+dataType: "html",
+data: jQuery("#"+formMain).serialize(),
+success: function(response) {
+// document.getElementById(result_id).innerHTML ="Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи";
+},
+error: function(response) {
+document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+}
+});
+
+$(':input')
+.not(':button, :submit, :reset, :hidden')
+.val('')
+.removeAttr('checked')
+.removeAttr('selected');
+}
+(function( $ ){
+
+$(function() {
+
+  $('.rf').each(function(){
+    var form = $(this),
+      btn = form.find('.btn_submit');
+
+    form.find('.rfield').addClass('empty_field');
+
+    // Функция проверки полей формы
+    function checkInput(){
+      form.find('.rfield').each(function(){
+        if($(this).val() != ''){
+          $(this).removeClass('empty_field');
+        } else {
+          $(this).addClass('empty_field');
+        }
+      });
+    }
+
+    // Функция подсветки незаполненных полей
+    function lightEmpty(){
+      form.find('.empty_field').css({'border-color':'#d8512d'});
+      setTimeout(function(){
+        form.find('.empty_field').removeAttr('style');
+      },500);
+    }
+
+    setInterval(function(){
+      checkInput();
+      var sizeEmpty = form.find('.empty_field').size();
+      if(sizeEmpty > 0){
+        if(btn.hasClass('disabled')){
+          return false
+        } else {
+          btn.addClass('disabled')
+        }
+      } else {
+        btn.removeClass('disabled')
+      }
+    },1000);
+
+    btn.click(function(){
+      var k =1;
+      if($(this).hasClass('disabled')){
+        lightEmpty();
+          console.log(k);
+        document.getElementById('messegeResult').innerHTML=('Все поля должны быть заполнены');
+
+      } else {
+        document.getElementById('messegeResult').innerHTML="Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи";
+      }
+    });
+
+  });
+
+});
+
+})( jQuery );
+</script>
+
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,12 +119,12 @@
     </div>
     <nav>
       <div class="topnav" id="myTopnav">
-        <a href="index.php">ГЛАВНАЯ</a>
-      <a href="immercompany.html">КОМПАНИИ</a>
-      <a href="company.html">СОТРУДНИЧЕСТВО</a>
-      <a href="calc.html">КАЛЬКУЛЯТОР</a>
-      <a href="company.html">О НАС</a>
-      <a href="leads.php" id="inn">ПРОВЕРКА КИ</a>
+        <a href="index.php" class="hrefa">ГЛАВНАЯ</a>
+      <a href="immercompany.html"class="hrefa">КОМПАНИИ</a>
+      <a href="company.html"class="hrefa">СОТРУДНИЧЕСТВО</a>
+      <a href="calc.html"class="hrefa">КАЛЬКУЛЯТОР</a>
+      <a href="company.html" class="hrefa">О НАС</a>
+      <a href="leads.php" id="inn" class="hrefa">ПРОВЕРКА КИ</a>
 
 
         <a id="menu" href="#" class="icon">&#9776;</a>
@@ -83,17 +147,16 @@
        <div class="form">
 
 
-       <form method="post" action="" id="formMain">
+       <form method="post" action="" class="rf"    id="formMain">
 
-             <input id="name" type="text" class="leadsinput" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" />
-             <input id="telephone" type="Tel"  class="leadsinput"  name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off"/>
-             <input id="button" type="button"   class="leadsinput"   value="Заказать консультацию " onclick="AjaxFormRequest('messegeResult', 'formMain', 'index.php#zatemnenie')"/>
+             <input id="name" type="text" onkeyup="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}" class="leadsinput rfield" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" />
+             <input id="telephone"   class="leadsinput rfield raz"   type="number"  onkeypress="return check(event,value)" oninput="checkNumberLength1()" autocomplete="off" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off"/>
+             <input id="button" type="button"   class="leadsinput btn_submit disabled"   value="Заказать консультацию " onclick="AjaxFormRequest('messegeResult', 'formMain', 'index.php#zatemnenie')"/>
+ <div id="result_id"></div>
        </form>
        </div>
        </div>
-       <div id="result_id">
 
-       </div>
 
 
 
@@ -114,7 +177,7 @@
 <div class="novid"><p><font color="#ae18ff"><b>0.01%</font> Новым клиентам</b></p></div>
 <p>Первый кредит    до <font color="#ae18ff" ><b>4000 грн</b></font></p>
 <p>Срок   <font color="#ae18ff"><b>0-356 дней</b></font></p>
-  <p>Одобрение     <font color="#ae18ff"><b>90%</b></font></p>
+  <p>Одобрение     <font color="#ae18ff"><b>96%</b></font></p>
     <p> Возраст <font color="#ae18ff"><b>18-65 лет</b></font></p>
       <div class="relog"><a href="http://bit.ly/2Up8XmA"><p>Оформить </p></a></div>
 </div>
@@ -195,7 +258,7 @@
       <div class="text_back">
 
           <div class="formreg3"><img src="images/news.png" alt="" class="mw-104">
-            <p><b>Кредит в Интернете будет хорошим решение, если необходимы дополнительные средства. Сравни кредиторов, подай заявку на кредит и получи деньги на банковскую карту, на свой банковский счет или наличными через платежную систему!</b></p><br></div>
+            <p><b>Кредит в Интернете будет хорошим решение, если необходимы дополнительные средства. Сравни кредиторов, подай заявку на кредит и получи деньги на банковскую карту!</b></p><br></div>
 
       </div>
 <div class="info_bar">
@@ -205,7 +268,7 @@
   • Годовой процент за пользование кредитом - min 1%, max 31%.<br>
   • В случае нарушения сроков, размер неустойки составляет от 1% до 3% от тела кредита в день<br>
   • В случае длительной задержки выплаты информация будет передана в УБКИ.<br>
-  • Продление кредита возможно при оплате процентов по кредиту, а так же  при оплате штрафных процентов если они было. Дополнительных комиссий за продление кредита не предусмотрено.
+  • Продление кредита возможно при оплате процентов по кредиту, а так же  при оплате штрафных процентов, если они были. Дополнительных комиссий за продление кредита не предусмотрено.
 
   </p>
 
@@ -223,7 +286,7 @@
 
 <p> Мобильный телефон и банковская карта</p>
 <div class="content3">
-<p>•	Для подтверждения данных о клиенте нужно иметь Паспорт и Идентификационный код, что бы сверить и проверить информацию  и возраст заемщика.
+<p>•	Для подтверждения данных о клиенте нужно иметь Паспорт и Идентификационный код, что бы проверить информацию  и возраст заемщика.
 </p></div>
 </div>
 
@@ -258,14 +321,15 @@
 Почту нужно иметь для подтверждения данных и просмотра актуальной информации о кредите. Так же после заключения договора, копия высылается вам на почту.
 <h2>Информация о полной стоимости кредита и пример расчета</h2>
 
-Если вы взяли кредит на сумму 1000 гривен на 30 дней с процентной ставкой 0,01% в день, то плата за пользование средствами составит 0,01% в день, т.е. 10 копеек в день. Получается вы возвращаете сумму процентов равную 3грн т.е 0.01%*30 дней. Для полного погашения кредита надо заплатить 1003грн.
+Если вы взяли кредит на сумму 1000 гривен на 30 дней с процентной ставкой 0,01% в день, то плата за пользование средствами составит 0,01% в день, т.е. 10 копеек в день. Получается вы возвращаете сумму процентов
+равную 3грн т.е 1000грн*0.01%*30 дней. Для полного погашения кредита надо заплатить 1003грн.
 
 Пример №2. Если вы берете кредит на сумму 2000грн на 60 дней с процентной ставкой 0.01% в день, то процент за пользование кредитом составит 12грн  т.е 2000*0.01%*60. Для полного погашения кредита надо заплатить 2012грн.
 На сайте есть кредитный калькулятор, с его помощью Вы сможете узнать детальную информацию по вашему кредиту.
 
 </h2>
 </div>
-<div class="collapsible"> <p>Условия кредитованя</p></div>
+<div class="collapsible"> <p>Условия кредитования</p></div>
   <div class="content2">
 <p>•	Первый кредит можно получить в размере от 500 грн до 100 000 грн, если своевременно будет осуществлена выплата кредита. Кредиторы предлагают разные периоды выплаты со скидкой - 100% от комиссионной платы за кредит, больше информации на домашней странице каждого кредитора.</br>
 •	В первый раз подавая заявку на кредит в Интернете, необходимо зарегистрироваться и заемщик соглашается с условиями выдачи кредита.<br>
@@ -309,7 +373,7 @@
 
 </p></div>
 <div class="lizense">
- Страница <a href="index.html">  Kregetor.com.ua</a> не является кредитором, компании, которые были приведены к сравнению, имеют допуск и лицензию кредитного учреждения.
+ Страница <a href="index.html">  Creditor.com.ua</a> не является кредитором, компании, которые были приведены к сравнению, имеют допуск и лицензию кредитного учреждения.
 
 </div>
 </main>
@@ -360,15 +424,16 @@
    <!-- Gmail amazingcsgo30@gmail.ru</p> -->
    <div class="contact">
      <div class="sity"> Киев, Украина </div>
-      <div class="email_contact">Email:  amazingcsgo30@gmail.com </div>
+      <div class="email_contact">Email:  creditorhelp24@gmail.com </div>
     <div class="facebook_contact">  Все права защищены  </div>
 
 </footer>
 
 
- <script src="script/script.js" charset="utf-8"></script>
+
 
 </div>
+<script src="script/script.js" charset="utf-8"></script>
   </body>
 </html>
 <?php
@@ -389,19 +454,24 @@ if($_POST)
     {
       $Name =  strip_tags(trim($_POST ['name']));
       $phone =  strip_tags(trim($_POST ['telephone']));
-      $sql = "INSERT INTO contactcentre(name, telephone) VALUES ('$Name', '$phone')";
+
     }
-    if (mysqli_query($conn, $sql)) {
-          echo "New record created successfully";
-    } else {
-          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-    mysqli_close($conn);
 
 
+if( $Name=='' || $phone=='')
+{
+    echo "все поля должны быть заполнены";
+}
+else{
+  $sql = "INSERT INTO contactcentre(name, telephone) VALUES ('$Name', '$phone')";
+    echo "Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи или вернуться на сайт";
+}
+if (mysqli_query($conn, $sql)) {
+      echo "New record created successfully";
+} else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+mysqli_close($conn);
 
-    if ($sql){
-          echo "Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи или вернуться на сайт";
-    }
 
 ?>

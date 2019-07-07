@@ -94,3 +94,20 @@ document.getElementById("totalterm").innerHTML = "  Сумма кредита:  
      document.getElementById('number').value = str;
      }
      }
+
+
+
+
+     function checkNumberLength1(){
+     var fieldLength = document.getElementById('telephone').value.length;
+     //Suppose u want 4 number of character
+     if(fieldLength <= 12){
+         return true;
+     }
+     else
+     {
+         var str = document.getElementById('telephone').value;
+         str = str.substring(0, str.length - 1);
+     document.getElementById('telephone').value = str;
+     }
+     }

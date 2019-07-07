@@ -35,7 +35,7 @@
     </div>
     <nav>
       <div class="topnav" id="myTopnav">
-        <a href="index.html">ГЛАВНАЯ</a>
+        <a href="index.php">ГЛАВНАЯ</a>
       <a href="immercompany.html">КОМПАНИИ</a>
       <a href="company.html">СОТРУДНИЧЕСТВО</a>
       <a href="calc.html">КАЛЬКУЛЯТОР</a>
@@ -93,7 +93,7 @@
 
   <nav>
 
-        <a href="index.html">ГЛАВНАЯ</a>
+        <a href="index.php">ГЛАВНАЯ</a>
       <a href="immercompany.html">КОМПАНИИ</a>
       <a href="company.html">СОТРУДНИЧЕСТВО</a>
       <a href="calc.html">КАЛЬКУЛЯТОР</a>
@@ -105,7 +105,7 @@
    <!-- Gmail amazingcsgo30@gmail.ru</p> -->
    <div class="contact">
      <div class="sity"> Киев, Украина </div>
-      <div class="email_contact">Email:  amazingcsgo30@gmail.com </div>
+      <div class="email_contact">Email:  creditorhelp24@gmail.com </div>
     <div class="facebook_contact">  Все права защищены  </div>
 
 </footer>
