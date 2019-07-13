@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="Creditor" content="online credit card">
 <style media="screen">
   .red1{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -103,7 +104,7 @@ $(function() {
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>creditor</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body >
@@ -111,7 +112,7 @@ $(function() {
   <header>
 
     <div class="logo">
-      <a href = "index.php" class = "graficlogo" >
+      <a href = "creditor.php" class = "graficlogo" >
               <img src="images\logo3.png" class="logo_main" alt="">
     </a>
       <h1 class="textstle">  Кредиты онлайн на карту</h1>
@@ -119,7 +120,7 @@ $(function() {
     </div>
     <nav>
       <div class="topnav" id="myTopnav">
-        <a href="index.php" class="hrefa">ГЛАВНАЯ</a>
+        <a href="creditor.php" class="hrefa">ГЛАВНАЯ</a>
       <a href="immercompany.html"class="hrefa">КОМПАНИИ</a>
       <a href="company.html"class="hrefa">СОТРУДНИЧЕСТВО</a>
       <a href="calc.html"class="hrefa">КАЛЬКУЛЯТОР</a>
@@ -149,9 +150,9 @@ $(function() {
 
        <form method="post" action="" class="rf"    id="formMain">
 
-             <input id="name" type="text" onkeyup="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}" class="leadsinput rfield" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" />
-             <input id="telephone"   class="leadsinput rfield raz"   type="number"  onkeypress="return check(event,value)" oninput="checkNumberLength1()" autocomplete="off" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off"/>
-             <input id="button" type="button"   class="leadsinput btn_submit disabled"   value="Заказать консультацию " onclick="AjaxFormRequest('messegeResult', 'formMain', 'index.php#zatemnenie')"/>
+             <input id="name" type="text" onkeyup="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}" class="leadsinput rfield" name="name" placeholder=" Введите ваше имя" maxlength="30" autocomplete="off" />
+             <input id="telephone"   class="leadsinput rfield raz"   type="number"  onkeypress="return check(event,value)" oninput="checkNumberLength1()" autocomplete="off" name="telephone" placeholder=" Введите ваш телефон" maxlength="30" autocomplete="off"/>
+             <input id="button" type="button"   class="leadsinput btn_submit disabled"   value="Заказать консультацию " onclick="AjaxFormRequest('messegeResult', 'formMain', 'creditor.php#zatemnenie')"/>
  <div id="result_id"></div>
        </form>
        </div>
@@ -373,7 +374,7 @@ $(function() {
 
 </p></div>
 <div class="lizense">
- Страница <a href="index.html">  Creditor.com.ua</a> не является кредитором, компании, которые были приведены к сравнению, имеют допуск и лицензию кредитного учреждения.
+ Страница <a href="creditor.php">  Creditor.com.ua</a> не является кредитором, компании, которые были приведены к сравнению, имеют допуск и лицензию кредитного учреждения.
 
 </div>
 </main>
@@ -412,7 +413,7 @@ $(function() {
 
   <nav>
 
-        <a href="index.php">ГЛАВНАЯ</a>
+        <a href="creditor.php">ГЛАВНАЯ</a>
       <a href="immercompany.html">КОМПАНИИ</a>
       <a href="company.html">СОТРУДНИЧЕСТВО</a>
       <a href="calc.html">КАЛЬКУЛЯТОР</a>

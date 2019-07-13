@@ -98,7 +98,7 @@ document.getElementById("totalterm").innerHTML = "  Сумма кредита:  
 
 
 
-     function checkNumberLength1(){
+     function checkNumberLength(){
      var fieldLength = document.getElementById('telephone').value.length;
      //Suppose u want 4 number of character
      if(fieldLength <= 12){

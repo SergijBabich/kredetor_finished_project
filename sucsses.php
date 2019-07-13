@@ -27,7 +27,7 @@
   <header>
 
     <div class="logo">
-      <a href = "index.html" class = "graficlogo" >
+      <a href = "creditor.php" class = "graficlogo" >
               <img src="images\logo3.png" class="logo_main" alt="">
     </a>
       <h1 class="textstle">  Кредиты онлайн на карту</h1>
@@ -35,7 +35,7 @@
     </div>
     <nav>
       <div class="topnav" id="myTopnav">
-        <a href="index.php">ГЛАВНАЯ</a>
+        <a href="creditor.php">ГЛАВНАЯ</a>
       <a href="immercompany.html">КОМПАНИИ</a>
       <a href="company.html">СОТРУДНИЧЕСТВО</a>
       <a href="calc.html">КАЛЬКУЛЯТОР</a>
@@ -93,7 +93,7 @@
 
   <nav>
 
-        <a href="index.php">ГЛАВНАЯ</a>
+        <a href="creditor.php">ГЛАВНАЯ</a>
       <a href="immercompany.html">КОМПАНИИ</a>
       <a href="company.html">СОТРУДНИЧЕСТВО</a>
       <a href="calc.html">КАЛЬКУЛЯТОР</a>

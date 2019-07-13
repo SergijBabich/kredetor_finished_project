@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="Creditor" content="view credit history">
 <style media="screen">
   .red1{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -26,7 +27,7 @@
   <header>
 
     <div class="logo">
-      <a href = "index.php" class = "graficlogo" >
+      <a href = "creditor.php" class = "graficlogo" >
               <img src="images\logo3.png" class="logo_main" alt="">
     </a>
       <h1 class="textstle">  Кредиты онлайн на карту</h1>
@@ -34,7 +35,7 @@
     </div>
     <nav>
       <div class="topnav" id="myTopnav">
-        <a href="index.php" class="hrefa">ГЛАВНАЯ</a>
+        <a href="creditor.php" class="hrefa">ГЛАВНАЯ</a>
       <a href="immercompany.html"class="hrefa">КОМПАНИИ</a>
       <a href="company.html"class="hrefa">СОТРУДНИЧЕСТВО</a>
       <a href="calc.html"class="hrefa">КАЛЬКУЛЯТОР</a>
@@ -49,7 +50,7 @@
 
 </header>
  <div class="container">
-   <form method="post" type="text" class="ajax-contact-form"  name="test" id="form" action="sacsses.php" >
+   <form method="post" type="text" class="ajax-contact-form"  name="test" id="form" action="sucsses.php" >
   *Ввелите ваше имя и фамилию
   <input  class="leadsinput" id="names" onKeyUp="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}" autocomplete="off" name="Name" value ="" placeholder=" Иван Иванов">
 
@@ -129,7 +130,7 @@
 
   <nav>
 
-        <a href="index.php">ГЛАВНАЯ</a>
+        <a href="creditor.php">ГЛАВНАЯ</a>
       <a href="immercompany.html">КОМПАНИИ</a>
       <a href="company.html">СОТРУДНИЧЕСТВО</a>
       <a href="calc.html">КАЛЬКУЛЯТОР</a>
