@@ -23,6 +23,32 @@
     <link rel="stylesheet" href="leads.css">
   </head>
   <body >
+    <div id=t_stLoad1 style="z-index:2000;width:104%;height:104%;background-color:black;position:fixed;left:-2%;top:-2%;border:none transparent;">
+<img id="Gif_2" style="position:absolute;background-color:black;height:100%;width:100%;margin:0 0 0 0;"/>
+<div style="text-align:center!important;width:100%;position:relative;z-index:100;margin-top:13%;">
+<div><div id="fountainG">
+ <div id="fountainG_1" class="fountainG"></div>
+ <div id="fountainG_2" class="fountainG"></div>
+ <div id="fountainG_3" class="fountainG"></div>
+ <div id="fountainG_4" class="fountainG"></div>
+ <div id="fountainG_5" class="fountainG"></div>
+ <div id="fountainG_6" class="fountainG"></div>
+ <div id="fountainG_7" class="fountainG"></div>
+ <div id="fountainG_8" class="fountainG"></div>
+  <span>Идет обработка информации, ожидайте!</span>
+</div></div>
+</div>
+</div>
+
+<script>$("#Gif_2").css({"opacity":0.003});</script>
+
+<!-- В конец Cтраницы -->
+<div id=t_stLoad style="width:100%;height:12px;border:none transparent;visibility:hidden;">
+<div id="Gif_test" style="height:100%;width:100%;" >
+
+  </div>
+</div>
+
     <div class="background">
   <header>
 
@@ -115,10 +141,16 @@
  <script src="script/ajax.js" charset="utf-8"></script>
 
 </div>
+  <script type="text/javascript">
+    window.onload = function(){
+ let preloader = document.getElementById('preloader');
+ preloader.style.display = 'none';
+
+    }
+  </script>
 
 
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   </body>
 </html>
