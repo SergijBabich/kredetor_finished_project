@@ -98,9 +98,9 @@ document.getElementById("totalterm").innerHTML = "  Сумма кредита:  
 
 
 
-     function checkNumberLength(){
+     function checkNumberLength1(){
      var fieldLength = document.getElementById('telephone').value.length;
-     //Suppose u want 4 number of character
+         //Suppose u want 4 number of character
      if(fieldLength <= 12){
          return true;
      }
@@ -111,3 +111,14 @@ document.getElementById("totalterm").innerHTML = "  Сумма кредита:  
      document.getElementById('telephone').value = str;
      }
      }
+
+     function AnimTstLoad(){
+var a=$("#t_stLoad1,#t_stLoad"),b=$("#t_stLoad1 *");
+b.animate({fontSize: "px"},5000,"swing", function(){a.replaceWith("");});}
+function TstLoad(){var a=$("#Gif_test").height();
+if(a>11){
+AnimTstLoad()
+}else {
+timerID = setTimeout("TstLoad()",100);return;
+}}
+TstLoad();
